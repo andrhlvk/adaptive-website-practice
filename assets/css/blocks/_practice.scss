@@ -1,0 +1,61 @@
+.practice {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -0.9375rem -1.875rem;
+
+   &__column {
+      flex: 0 1 25%;
+
+      margin-bottom: 1.875rem;
+      padding: 0 0.9375rem;
+
+      @media (max-width: 65.625rem) {
+         flex: 0 1 50%;
+      }
+
+      @media (max-width: 29.9375em) {
+         flex: 0 1 100%;
+     }
+   }
+
+   &__item {
+      background-color: $light-bg;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+   }
+
+   &__header {
+      padding: 1.875rem;
+      flex: 1 1 auto;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.5;
+
+      &:not(:last-child) {
+         margin-bottom: 0.9375rem;
+      }
+
+      a {
+         text-decoration: none;
+         color: inherit;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__text {
+      font-weight: 500;
+      color: $text-color2;
+      line-height: 1.43;
+   }
+
+   &__link img {
+      width: 100%;
+   }
+}

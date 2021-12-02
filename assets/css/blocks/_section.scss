@@ -1,0 +1,46 @@
+.section {
+   margin: 8rem 0;
+
+   @media (max-width: 62em) {
+      margin: 4rem 0;
+   }
+
+   &-who {
+      background-color: white;
+      margin: 0;
+      padding: 7rem 0;
+
+      @media (max-width: 62em) {
+         padding: 4rem 0;
+      }
+   }
+
+   &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 3.125rem;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 1.425;
+
+      &:not(:last-child) {
+         margin-bottom: 0.625rem;
+      }
+
+      @media (max-width: 47.9375em) {
+         font-size: 2.25rem;
+      }
+   }
+
+   &__text {
+      max-width: 31.9375rem;
+      font-weight: 500;
+      color: $text-color2;
+      line-height: 1.43;
+   }
+}

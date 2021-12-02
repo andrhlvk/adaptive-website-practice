@@ -1,0 +1,26 @@
+.clients {
+   padding: 3.125rem 0;
+
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 -0.9375rem -0.625rem;
+   }
+
+   &__item {
+      margin-bottom: 1.875rem;
+      padding: 0 0.9375rem;
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 62em) {
+         width: 33%;
+      }
+
+      @media (max-width: 47.9375em) {
+         width: 50%;
+      }
+   }
+}

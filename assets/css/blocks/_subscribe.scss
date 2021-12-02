@@ -1,0 +1,107 @@
+.subscribe {
+   position: relative;
+   padding-bottom: 1.25rem;
+
+   @media (max-width: 47.9375em) {
+      padding-bottom: 0;
+   }
+
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 77px;
+      bottom: 0;
+      z-index: 1;
+      background: $dark-bg;
+
+      @media (max-width: 47.9375em) {
+         display: none;
+         padding-bottom: 0;
+      }
+   }
+
+   &__inner {
+      position: relative;
+      z-index: 2;
+      padding: 1.875rem 3.125rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: $secondary2;
+      border-radius: 2px;
+
+      @media (min-width: 62em) {
+         margin: 0 2rem;
+      }
+
+      @media (max-width: 47.9375em) {
+         display: block;
+         margin: 0 -0.9375rem;
+         padding: 0.9375rem;
+      }
+   }
+
+   &__title {
+      max-width: 266px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.333333;
+      color: $light-text-color;
+
+      @media (max-width: 47.9375em) {
+         margin-bottom: 1.5rem;
+         text-align: center;
+         max-width: none;
+      }
+   }
+
+   &__form {
+      display: flex;
+      flex: 0 1 50%;
+   }
+
+   &__input {
+      width: 100%;
+      flex: 1 1 auto;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid #e6e6e6;
+      padding: 0.9375rem 1.25rem;
+      border-right: 0;
+      font-weight: 600;
+
+      &::placeholder {
+         font-weight: 400;
+         line-height: 2;
+         font-weight: 400;
+         color: $text-color2;
+      }
+
+      &:focus {
+         color: $text-color;
+      }
+   }
+
+   &__button {
+      border: 1px solid #e6e6e6;
+      cursor: pointer;
+      font-weight: 400;
+      line-height: 2;
+      color: $light-text-color;
+      padding: 0.9375rem 1.40625rem;
+      background-color: $alert;
+      border-radius: 0 5px 5px 0;
+      transition: background-color .2s linear;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &:hover {
+         background-color: $hover;
+      }
+   }
+}

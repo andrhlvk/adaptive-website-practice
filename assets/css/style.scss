@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0
+}
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none
+}
+
+html:focus-within {
+    scroll-behavior: smooth
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html:focus-within {
+        scroll-behavior: auto
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important
+    }
+}
+
+@import "variables";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: $text-color;
+    background-color: #fafafa;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 65.375rem;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+.main {
+    flex: 1 1 auto
+}
+
+// Blocks
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/footer";
+@import "blocks/services";
+@import "blocks/section";
+@import "blocks/achievements";
+@import "blocks/practice";
+@import "blocks/who";
+@import "blocks/clients";
+@import "blocks/subscribe";
+@import "blocks/getintouch";
